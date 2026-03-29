@@ -1,0 +1,15 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) !=len(t):
+            return False
+
+        myhash1={}
+        myhash2={}
+        
+        for i in range(len(s)):
+            myhash1[s[i]]= 1+ myhash1.get(s[i],0)
+            myhash2[t[i]]= 1+ myhash2.get(t[i],0)
+        
+        return myhash1==myhash2
+        
+        
